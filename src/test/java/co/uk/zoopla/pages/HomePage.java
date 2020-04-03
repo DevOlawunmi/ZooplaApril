@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
     private WebElement searchButton;
     @FindBy (id = "cookie-consent-form")
     private WebElement consentForm;
-    @FindBy (className = ".ui-button-primary.ui-cookie-accept-all-medium-large")
+    @FindBy (xpath = "//*[@id=\"cookie-consent-form\"]/div/div/div/button[2]")
     private WebElement acceptCookies;
 
 
