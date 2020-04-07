@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
     private WebElement searchButton;
     @FindBy (id = "cookie-consent-form")
     private WebElement consentForm;
-    @FindBy (xpath = "//*[@id=\"cookie-consent-form\"]/div/div/div/button[2]")
+    @FindBy (xpath = "//*[@id=\"cookie-consent-form\"]/div/div/div/button[2]                                                                                                                                                                                                                  ")
     private WebElement acceptCookies;
 
 
