@@ -67,4 +67,7 @@ searchResultPage.isPropertyDisplayed(property);
         productDetailsPage = searchResultPage.clickOnARandomResult();
     }
 
+    @When("I click on To Rent")
+    public void iClickOnToRent() {
+    }
 }

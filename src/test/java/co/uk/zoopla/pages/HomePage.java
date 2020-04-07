@@ -28,6 +28,8 @@ public class HomePage extends BasePage {
     private WebElement consentForm;
     @FindBy (xpath = "//*[@id=\"cookie-consent-form\"]/div/div/div/button[2]                                                                                                                                                                                                                  ")
     private WebElement acceptCookies;
+    @FindBy(id = "search-tabs-to-rent")
+    private WebElement toRentTab;
 
 
 public void cookieConsent(){
@@ -70,5 +72,7 @@ public void cookieConsent(){
         searchButton.click();
         return new SearchResultPage(driver);
     }
-
+public void clickOnToRentTab(){
+    toRentTab.click();
+}
 }
