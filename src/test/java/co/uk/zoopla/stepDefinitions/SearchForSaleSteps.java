@@ -4,6 +4,7 @@ import co.uk.zoopla.pages.BasePage;
 import co.uk.zoopla.pages.HomePage;
 import co.uk.zoopla.pages.ProductDetailsPage;
 import co.uk.zoopla.pages.SearchResultPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -67,7 +68,22 @@ searchResultPage.isPropertyDisplayed(property);
         productDetailsPage = searchResultPage.clickOnARandomResult();
     }
 
-    @When("I click on To Rent")
+    @And("I click on To Rent")
     public void iClickOnToRent() {
+        homePage.clickOnToRentTab();
+    }
+
+    @When("I clear all cookies")
+    public void iClearAllCookies() {homePage.cookieConsent();
+    }
+
+    @And("I select {string} from Min rent price dropdown")
+    public void iSelectFromMinRentPriceDropdown(String minRent) {
+        homePage.selectMinimumRent(minRent);
+    }
+
+    @And("I select {string} from Max rent price dropdown")
+    public void iSelectFromMaxRentPriceDropdown(String maxRent) {
+        homePage.selectMaximumRent(maxRent);
     }
 }

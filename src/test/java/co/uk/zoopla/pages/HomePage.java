@@ -30,6 +30,10 @@ public class HomePage extends BasePage {
     private WebElement acceptCookies;
     @FindBy(id = "search-tabs-to-rent")
     private WebElement toRentTab;
+    @FindBy (id = "rent_price_min_per_month")
+    private WebElement rentMin;
+    @FindBy (id = "rent_price_max_per_month")
+    private WebElement rentMax;
 
 
 public void cookieConsent(){
@@ -74,5 +78,11 @@ public void cookieConsent(){
     }
 public void clickOnToRentTab(){
     toRentTab.click();
+}
+public void selectMinimumRent(String minRent){
+    selectByText(rentMin, minRent);
+}
+public void selectMaximumRent (String maxRent){
+    selectByText(rentMax, maxRent);
 }
 }
